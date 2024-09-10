@@ -1,5 +1,7 @@
 import React from 'react'
-
+import notification from '../assets/notification.png'
+import message from '../assets/message.png'
+import profile from '../assets/profile.png'
 const Navbar = () => {
     return (
         <>
@@ -12,9 +14,9 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="nav-right d-flex align-items-center gap-3">
-                    <img src="./src/assets/notification.png" width={30} height={30} alt="" className='cursor' />
-                    <img src="./src/assets/message.png" width={30} height={30} alt="" className='cursor' />
-                    <img src="./src/assets/profile.png" width={45} height={45} alt="" className='cursor' />
+                    <img src={notification} width={30} height={30} alt="" className='cursor' />
+                    <img src={message} width={30} height={30} alt="" className='cursor' />
+                    <img src={profile} width={45} height={45} alt="" className='cursor' />
                     <span className="name cursor" style={{ color: '#161e54', fontWeight: '500' }} >
                         Admirra John
                         <i className="fa-solid fa-angle-down ps-2" style={{ color: '#737898' }}></i>

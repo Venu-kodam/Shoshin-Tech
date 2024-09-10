@@ -1,15 +1,20 @@
 import React from 'react'
+import graph1 from "../assets/graph1.png"
+import graph2 from "../assets/graph2.png"
+import pinned from "../assets/pin.png"
+import unpinned from "../assets/unpinned.png"
+import threedots from "../assets/3dots.png"
 import Announcements from './Announcements'
 
 const Dashboard = () => {
     const dashboard_item_data = [
-        { title: 'Total Employees', count: 216, men: '120', women: '96', src: "graph1" },
-        { title: 'Talent Request', count: 16, men: '6', women: '10', src: "graph2" },
+        { title: 'Total Employees', count: 216, men: '120', women: '96', src: graph1 },
+        { title: 'Talent Request', count: 16, men: '6', women: '10', src: graph2 },
     ]
     const announcements_data = [
-        { text: 'Outing Schedule for every department', time: '5 Minutes ago', icon1: 'pin',unpinned:'unpinned', icon2: '3dots' },
-        { text: 'Meeting HR Department', time: 'Yesterday 12:30 PM', icon1: 'pin',unpinned:'unpinned', icon2: '3dots' },
-        { text: `IT Department need two more talents for UX/UI Designer Position`,unpinned:'unpinned', time: 'Yesterday 09:15 AM', icon1: 'pin', icon2: '3dots' }
+        { text: 'Outing Schedule for every department', time: '5 Minutes ago', icon1: pinned,unpin:unpinned, icon2: threedots },
+        { text: 'Meeting HR Department', time: 'Yesterday 12:30 PM', icon1: pinned,unpin:unpinned, icon2:  threedots },
+        { text: `IT Department need two more talents for UX/UI Designer Position`,icon1: pinned,unpin:unpinned, time: 'Yesterday 09:15 AM',icon2:  threedots }
     ]
     return (
         <div className='dashboard'>
@@ -43,7 +48,7 @@ const Dashboard = () => {
                                     <p className='mb-0' style={{ color: '#686868', fontSize: '12px' }}>{item.women} Women</p>
                                 </div>
                                 <div className='col-md-6 col-lg-6'>
-                                    <img src={`./src/assets/${item.src}.png`} width={110} alt="" />
+                                    <img src={item.src} width={110} alt="" />
                                 </div>
                             </div>
                         ))}
@@ -56,7 +61,7 @@ const Dashboard = () => {
                             </div>
                             {announcements_data.map((item, index) => (
                                 <div key={index}>
-                                    <Announcements text={item.text} time={item.time} icon1={item.icon1} icon2={item.icon2} unpinned={item.unpinned}/>
+                                    <Announcements text={item.text} time={item.time} icon1={item.icon1} icon2={item.icon2} unpin={item.unpin}/>
                                 </div>
                             ))}
                         </div>
@@ -96,7 +101,7 @@ const Dashboard = () => {
                                     <p className='mb-0' style={{ fontSize: '10px' }}>Today 11:30 AM</p>
                                 </div>
                                 <div className='d-flex align-items-center gap-3'>
-                                    <img src="./src/assets/3dots.png" alt="" />
+                                    <img src={threedots} alt="" />
                                 </div>
                             </div>
                             <p style={{ color: '#686868', fontSize: '12px' }}>Other</p>
