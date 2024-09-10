@@ -1,0 +1,37 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app{
+  width: 100%;
+  min-height: 100vh;
+}
+.sidebar{
+  background:#fafafa;
+  height: inherit;
+  padding: 10px 30px;
+}
+.main{
+  width: 100%;
+  margin: 0 40px;
+}
+.searchbox{
+  width: 350px;
+}
+
+.graphs-section{
+  width: 100% !important;
+  margin: 16px 11px;
+  column-gap: 50px;
+}
+.recent-activity{
+  border-radius: 10px;
+  color: #fff;
+}
+.cursor{
+  cursor: pointer;
+}
+.graph-item{
+  width: 48%;
+}
